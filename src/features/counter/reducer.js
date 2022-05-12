@@ -2,16 +2,16 @@ const INCREMENT = "COUTER.INCREMENT";
 const DECREMENT = "COUTER.DECREMENT";
 
 const initialState = {
-  couter: 0,
+  count: 0,
 };
 
-const CouterReducer = (state, action) => {
-  let newState;
+const CouterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-      return newState;
+      console.log(state.co);
+      return { count: state.count + 1 };
     case DECREMENT:
-      return newState;
+      return { count: state.count - 1 };
     default:
       return state;
   }
